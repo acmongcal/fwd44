@@ -1,0 +1,22 @@
+h2{
+    color: darkred;
+}
+.warning{
+    color: red;
+}
+.bg-gray{
+    background-color: lightgray;
+}
+ol li,
+dd {
+    color: rebeccapurple;
+}
+section.warning{
+    background-color: lightyellow;
+}
+.table-custom{
+    color: orange;
+}
+table{
+    color: green;
+}
