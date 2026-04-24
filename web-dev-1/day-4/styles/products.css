@@ -121,12 +121,183 @@ a:focus {
 	
 }
 
-/* Section: About */
+.site-header {
+	background-color: #ffffff;
+	/* add flex styles here */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 2rem;
+}
+.site-header .site-name{
+	color: #000000;
+	font-size: 2rem;
+}
+
+.site-logo {
+	max-width: 6rem;
+	margin: 1rem;
+}
+
+.site-logo img {
+	display: block;
+}
+
+.site-navigation {
+	padding: 0 1rem;
+}
+
+.site-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* START -- STYLES FOR MOBILE MENU */
+/* we will cover this more later */
+.site-navigation ul {
+	display: none;
+	position: absolute;
+	top: 4.5rem;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: #ffe6bf;
+}
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+
+.site-footer{
+	background-color: #f0ededf9;
+	display: block;
+}
+
+footer p{
+	padding-left: 2.3rem;
+}
+footer address{
+	padding-left: 2.3rem;
+}
+.section-about h2{
+	text-align: center;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+.product{
+	border-width: 0.1rem;
+	border-style: outset;
+	width: 300px;
+	padding: 1rem;
+}
+
+a.product-link{
+	background-color: #008000;
+	color: #ffffff;
+	padding: 0.5rem;
+	display: block;
+	text-align: center;
+	width: 10rem;
+}
 
 
-/* Section: Products */
+/* END -- STYLES FOR MOBILE MENU */
 
 
+/* MEDIA QUERIES */
+@media (min-width: 43.75em) {
+/* HEADER MENU */
+	.menu-toggle {
+		display: none;
+	}
 
-/* Footer
---------------------------------------------- */
+	.site-navigation {
+		padding: 0 1rem;
+		/* add flex styles here */
+		display: flex;
+		gap: 0 30rem;
+		order: 0;
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		/* add flex styles here */
+		display: flex;
+		/* START - Remove Mobile Menu Styles */
+		position: relative;
+		top: 0;
+		background-color: #ffffff;
+		order: 1;
+		/* END - Remove Mobile Menu Styles  */
+	}
+	
+	.site-navigation a {
+		line-height: 4.5rem; /* Matches the height of the .site-logo: 6rem + 1rem + 1rem */
+		padding: 0 1rem;
+		color: #000000;
+	}
+
+		/* Section: About */
+	.section-about{
+		width: 70%;
+		margin: 0 auto;
+	}
+	
+
+	/* Section: Products */
+	.section-products{
+		display: flex;
+	}
+	.products-wrapper{
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem 1rem;
+		margin-left: 5rem;
+		margin-bottom: 2rem;
+		order: 1;
+	}
+
+	.products-sidebar{
+		width: 12%;
+		display: block
+	}
+	/* Footer
+	--------------------------------------------- */
+	.site-footer{
+		background-color: #f0ededf9;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2.5rem 2rem;
+	}
+
+}
+
+

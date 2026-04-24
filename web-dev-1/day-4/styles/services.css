@@ -5,7 +5,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #282828;
-	max-width: 31.25rem;
+	/* max-width: 31.25rem; */
 	margin: 0 auto;
 }
 
@@ -54,6 +54,12 @@ footer {
 	background-color: #eeeeee;
 	text-align: center;
 	padding: 1rem;
+}
+
+main{
+	max-width: 75rem;
+	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 footer p {
@@ -107,6 +113,28 @@ nav a {
 	background-color: #234723;
 }
 
+
+@media (min-width:50em){
+
+	.services article{
+		background-color: #caebff;
+	}
+	.services a{
+		background-color: #346270;
+	}
+
+	.cards{
+		display: flex;
+		/* flex-direction: column;
+		flex-direction: row-reverse; */
+		flex-wrap: wrap;
+		/* justify-content: space-between; */
+		justify-content: space-around;
+	}
+	.cards article{
+		width: 30%;
+	}
+}
 
 /* Testimonials Styles */
 .testimonials img {

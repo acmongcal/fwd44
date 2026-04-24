@@ -138,6 +138,7 @@ a:active {
 .site-header {
 	background-color: #ffe6bf;
 	/* add flex styles here */
+	display: flex;
 }
 
 .site-logo {
