@@ -1,0 +1,106 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+# Base
+# Components
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-family: Roboto, Arial, "Helvetica Neue", Helvetica;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #282828;
+	background-color: #888888;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Playfair Display",Georgia, Times, "Times New Roman", serif;
+	margin: .5em 0;
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+
+/* Elements
+--------------------------------------------- */
+header,
+footer {
+	padding: 1rem;
+	background-color: #eeeeee;
+	text-align: center;
+}
+
+section,
+aside {
+	padding: 0 1rem;
+}
+
+q::before,
+q::after {
+	content: '';
+}
+
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited { 
+	color: #008000;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 1px dotted;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+.site-wrapper {
+	max-width: 62.5rem;
+	margin: 0 auto;
+}
+
+main {
+	padding: 1rem;
+	background-color: #ffffff;
+}
+
+/* Div with images flex styles go here */
+
+
+/* Form Styles 
+* Form should have a max-width of 480px and should be centred along the left / right axis within the browser
+* To create the numbered green circles, try border-radius and setting the value to 50% 
+*/
