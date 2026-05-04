@@ -1,0 +1,53 @@
+/* 
+Custom Google Fonts
+
+Task #1: After linking the fonts in your HTML file, set Kalnia to be the font for all heading elements and set Montserrat to be the body font.
+*/
+body{
+    font-family: "Kalnia";
+}
+
+h1,h2, h3,h4, h5,h6{
+    font-family: "Montserrat";
+}
+
+
+
+/* 
+CSS Cascade
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#the_cascade
+
+Task #2: Increase the font size of all <figcaption> elements.
+*/
+
+figcaption{
+    font-size: 1.5rem;
+}
+
+
+/* 
+CSS Specificity
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity
+
+Task #3: Decrease the height of the header image only in the "Beaches" section.
+*/
+.section-beaches header img{
+    height: 25rem;
+}
+
+
+/* 
+CSS Inheritance
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#inheritance
+
+Task #4: Make the font color of every <caption>, <td>, and <th> element red by targetting only one element.
+*/
+
+table{
+    color: red;
+}
+
+
+
+
+
