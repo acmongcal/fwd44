@@ -1,7 +1,17 @@
-const maxHeight= 750;
-const maxWidth = 1300;
+
 const instructions = document.getElementById('instructions');
-const bigfoot = document.getElementById('bigfoot')
+const bigfoot = document.getElementById('bigfoot');
+const forest = document.getElementById('forest');
+
+bigfoot.style.display = 'block';
+
+console.log(bigfoot.clientHeight);
+console.log(bigfoot.clientWidth);
+
+const maxWidth = forest.clientWidth - bigfoot.clientWidth;
+const maxHeight = forest.clientHeight - bigfoot.clientHeight; 
+bigfoot.style.display = 'none';
+
 
 console.log(document.getElementById('forest').style.width);
 //Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
@@ -12,9 +22,8 @@ function getRandomInt(max) {
 
 document.getElementById('btn-start').addEventListener('click',function(){
   window.alert("find bigfoot in the forest and click on him");
-
+  
   instructions.style.display='none';
-
   bigfoot.style.top = getRandomInt(maxHeight) + 'px';
   bigfoot.style.left = getRandomInt(maxWidth) + 'px';
   bigfoot.style.display = 'block';
