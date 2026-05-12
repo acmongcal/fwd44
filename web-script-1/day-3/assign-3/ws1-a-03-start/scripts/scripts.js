@@ -1,6 +1,3 @@
-
-
-
 const turnLeft = document.getElementById('btn-turn-clockwise');
 const turnRight = document.getElementById('btn-turn-counter-clockwise');
 const bike = document.getElementById('slide');
@@ -45,17 +42,18 @@ turnLeft.addEventListener('click', function(){
 });
 
 
-
 //MouseHold
 turnRight.addEventListener('mousedown', function(e){
     bikeInterval = setInterval(bikeTurnRight, 100);
 })
 
-
 turnRight.addEventListener('mouseup', function(e){
     clearInterval(bikeInterval);
 })
 
+turnRight.addEventListener('mouseleave', function(e){
+    clearInterval(bikeInterval);
+})
 
 turnLeft.addEventListener('mousedown', function(e){
     bikeInterval = setInterval(bikeTurnLeft, 50);
@@ -66,31 +64,41 @@ turnLeft.addEventListener('mouseup', function(e){
     clearInterval(bikeInterval);
 })
 
+turnLeft.addEventListener('mouseleave', function(e){
+    clearInterval(bikeInterval);
+})
+
 
  //Mouse Drag
 bike.addEventListener('mousedown', function(e){
     initialX = e.clientX;
     isDragging = true;
+    e.preventDefault();
+})
+
+bike.addEventListener('mouseup', function(e){
+    initialX = e.clientX;
+    isDragging = false;
+})
+bike.addEventListener('mouseleave', function(e){
+    initialX = null;
+    isDragging = false;
 })
 
 bike.addEventListener('mousemove', function(e){
-    const currentX = e.clientX;
-    var distance = currentX - initialX;
-    if(isDragging && distance < 10){
-        bikeInterval = setInterval(bikeTurnLeft, 50);
+    const newX = e.clientX;
+    if(isDragging && newX < (initialX)){
+        bikeTurnLeft();
+        initialX = newX;
     }
-    else if(isDragging && distance > 10){
-        bikeInterval = setInterval(bikeTurnRight, 50);
+    else if(isDragging && newX > (initialX)){
+        bikeTurnRight();
+        initialX = newX;
     }
     else{
         return;
     }
 })
 
-bike.addEventListener('mouseup', function(e){
-    initialX = e.clientX;
-    isDragging = false;
-    clearInterval(bikeInterval);
-})
 
 
