@@ -8,6 +8,29 @@ const btnAddBox = document.getElementById('add-box');
 let tr; // add value later...
 let box; // add value later...
 
+
+const boxRow = document.getElementById('box-row-01');
+boxRow.style.border ='5px dotted rebeccapurple';
+
+const boxes = document.getElementsByClassName('box');
+
+boxes[1].style.backgroundColor = 'orange';
+
+const paras = document.getElementsByTagName('p');
+console.log(paras.length);
+
+/// add a paragraph after the last paragraph storeed in paras
+const newPara = document.createElement('p');
+newPara.textContent='I am a new paragraph added';
+
+const lastPara = paras[paras.length - 1];
+lastPara.insertAdjacentElement('afterend',newPara);
+
+console.log(paras.length);
+paraArr =[...paras];
+console.log(paraArr);
+
+
 // Selecting Elements
 
 // Live DOM Selectors

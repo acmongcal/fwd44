@@ -9,6 +9,14 @@ let box; // add value later...
 
 // Selecting Elements
 
+//Grab single element with querySelector
+const para = document.querySelector('.wrapper p');
+const paras = document.querySelectorAll('.wrapper p');
+console.log(paras);
+
+paras.forEach(p=> p.style.border = '2px solid green');
+paras[1].style.color = 'orange';
+
 // Query Selector
 btnSelectRows.addEventListener('click', function(){
     tr = document.querySelector('tr');

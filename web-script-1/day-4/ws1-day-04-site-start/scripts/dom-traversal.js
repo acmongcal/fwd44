@@ -3,6 +3,7 @@
 // parentNode
 const childBox01 = document.getElementById('child-box-01');
 childBox01.addEventListener('click', function(){
+    this.parentNode.classlist.toggle('selected');
     
 });
 // closest()
