@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Wars - Simplified</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="title-bar">
+      <h1>Match Wars</h1>
+      <div class="stats">
+        <p>Turns: <span id="turn-output">00</span></p>
+        <p>Matches: <span id="match-output">00</span></p>
+      </div>
+      <div class="actions">
+        <button id="btn-reset">Reset</button>
+      </div>
+    </header>
+
+    <p class="intro">
+      Click two cards to reveal them. If the cards match, they stay open. Match all pairs to win.
+    </p>
+
+    <p id="message" class="message" aria-live="polite">Find all 6 matches.</p>
+
+    <section class="game-board" id="game-board">
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/c-3po.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/boba-fett.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/c-3po.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/darth-maul.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/boba-fett.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/darth-maul.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/darth-vader.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/princess-leia.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/lando-calrissian.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/princess-leia.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/lando-calrissian.jpg" alt="Character card"></div></div>
+      <div class="card"><div class="door"><div class="door-left"><img src="images/door-left.jpg" alt="Left door"></div><div class="door-right"><img src="images/door-right.jpg" alt="Right door"></div></div><div class="shadow"></div><div class="card-image"><img src="images/darth-vader.jpg" alt="Character card"></div></div>
+    </section>
+  </main>
+
+  <script type="module" src="scripts/game.js"></script>
+</body>
+</html>

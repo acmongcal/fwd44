@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 3 - Game Loop and Collision Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="badge">FWD Web Scripting 1</div>
+    <h1>Demo 3: Game Loop + Collision Detection</h1>
+    <p class="intro">This demo turns the canvas ideas into a small game. The player moves with the keyboard, enemies move across the screen, and the game ends when rectangles overlap.</p>
+
+    <section class="card">
+      <canvas id="gameCanvas" width="500" height="260"></canvas>
+
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <div class="status-row">
+        <div class="pill" id="statusText">Status: Press Start</div>
+        <div class="pill" id="scoreText">Score: 0</div>
+      </div>
+
+      <section class="notes">
+        <h2>Teaching Notes</h2>
+        <ul>
+          <li>Each frame follows a pattern: update, check collisions, draw.</li>
+          <li>Collision detection checks whether the rectangles overlap.</li>
+          <li>This is a good beginner game-loop example.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

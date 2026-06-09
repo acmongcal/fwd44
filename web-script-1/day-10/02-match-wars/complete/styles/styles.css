@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: black;
+  background-image: url("../images/bg-match-wars-game-board.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stats p,
+.intro,
+.message {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.actions button {
+  border: 2px solid #f0b084;
+  background-color: #ae659d;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.actions button:hover {
+  background-color: #934d83;
+}
+
+.intro {
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.message {
+  min-height: 28px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.game-board {
+  width: 100%;
+  min-height: 560px;
+  border: 4px solid white;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+  cursor: pointer;
+  background-color: black;
+}
+
+.card.matched {
+  outline: 4px solid #00acd8;
+}
+
+.card-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.shadow {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset -1px -2px 41px 5px #000;
+  z-index: 1;
+}
+
+.door-left,
+.door-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease-in;
+}
+
+.door-left {
+  left: 0;
+}
+
+.door-right {
+  right: 0;
+}
+
+.card.open .door-left,
+.card.matched .door-left {
+  transform: translateX(-100%);
+}
+
+.card.open .door-right,
+.card.matched .door-right {
+  transform: translateX(100%);
+}
+
+@media (max-width: 1050px) {
+  .game-board {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+}
