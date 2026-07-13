@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+
+body{
+    font-family: $body-font;
+    line-height: 1.5;
+    @media (min-width:$tablet){
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        background-color: $brand-color;
+    }
+}
+
+h1,h2,h3,
+h4,h5,h6{
+    font-family: $heading-font;
+    font-weight: 700;
+}
+
+a{
+    color: $brand-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    &:hover, &:focus{
+        text-decoration: underline;
+    }
+
+    &:visited{
+        color: $dark;
+    }
+    &:focus{
+        outline: 1px solid $brand-color;
+    }
+}
+
+
+// @media (min-width:$tablet){
+//     body{
+//         font-size: clamp(1rem, 3vw, 1.25rem);
+//         background-color: $brand-color;
+//     }
+// }

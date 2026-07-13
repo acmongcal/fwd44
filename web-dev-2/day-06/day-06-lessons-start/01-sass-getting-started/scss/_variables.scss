@@ -1,0 +1,45 @@
+@use 'sass:math';
+
+//Colors
+$brand-color: #8540c5;
+$body-bg-color:#303030;
+$wrapper-bg-color:#ffffff;
+
+
+//Text Colors
+$dark:#000000;
+$light:#ffffff;
+
+//Fonts
+$body-font: Helvetica, Verdana, sans-serif;
+$heading-font: Georgia, Times, 'Times New Roman', serif;
+
+
+//Function
+@function em($px, $bc: 16){
+    @return #{math.div($px,$bc)}em;
+}
+
+$tablet:em(800);
+$desktop-medium: em(1200);
+$desktop-large: em(1600);
+
+//Mixins & Placeholders
+
+//Placeholder
+%card{
+    display: flex;
+    flex-direction: column;
+    max-width: 18.75rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+//Mixins
+@mixin flex($jc: center, $ai: center, $gap: 1rem){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}

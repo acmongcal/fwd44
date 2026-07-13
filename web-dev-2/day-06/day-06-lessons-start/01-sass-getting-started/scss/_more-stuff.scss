@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+.more-stuff{
+    .a-03{
+        @include flex($gap: .5rem);
+        flex-direction: column;
+    }
+    .a-04{
+        @include flex($gap: .5rem);
+        flex-direction: column;
+    }
+}
