@@ -16,7 +16,6 @@ function Quote(){
             setQuotesArray(quotesArray.filter((quote, i) => i !== randomIndex));
             setButton("Get Another Quote");
         }
-
     }
     return(
         <main>
