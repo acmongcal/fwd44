@@ -1,6 +1,5 @@
 import quotes from "../quotes";
 import { useState } from "react";
-
 import { getRandomIndex } from "../utilities/utils";
 
 function Quote(){
@@ -24,7 +23,7 @@ function Quote(){
             <section>
                 <blockquote>
                     <p>{currentQuote.quote}</p>
-                    {currentQuote.author && <cite>-{currentQuote.author }</cite>}
+                    {currentQuote.author && <cite>-{currentQuote.author}</cite>}
                 </blockquote>
                 <button onClick={getQuote}>{button}</button>
             </section>
