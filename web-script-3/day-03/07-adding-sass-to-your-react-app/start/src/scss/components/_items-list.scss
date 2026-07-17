@@ -1,0 +1,34 @@
+// Items List
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+
+.items-list-container {
+    
+    border: 1px dotted #ccc;
+    margin: em(20) 0;
+    max-width: 270px;
+
+    ol {
+        padding-left: 0;
+        list-style-position: inside;        
+        margin: 0;
+    }
+    li {
+        font-size: em(15);
+        padding: em(8, 15);
+        &:nth-child(even){
+            background-color: $grey;
+        }
+    }
+    .item-container {
+        display: inline-flex;
+    }
+    .item-text {
+        width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}

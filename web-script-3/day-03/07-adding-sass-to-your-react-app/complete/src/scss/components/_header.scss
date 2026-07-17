@@ -1,0 +1,11 @@
+// Header
+
+@use '../index' as *;
+
+header {
+    background-color: $yellow;
+    padding: $section-padding;
+    h1 {
+        @include flatten;
+    }
+}
