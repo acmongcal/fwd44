@@ -1,8 +1,10 @@
+
+import groupOfKittens from '../images/group-of-kittens.jpg';
 function Meetup() {
     return (
         <article className="article-meetup">
             <div className="featured-image">
-
+                <img src={groupOfKittens} alt="Group of kittens" />
             </div>
             <div className="featured-text">
                 <h2>First Monthly Kitten Meetup</h2>

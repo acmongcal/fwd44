@@ -1,4 +1,4 @@
-function Rename() {
+function Rename({handleRename}) {
 
     const renameYourApp = () => {
         let newAppName = prompt('What is the new name of your app?');
@@ -16,6 +16,7 @@ function Rename() {
         }
 
         console.log({ newAppName });
+        handleRename(newAppName);
     }
 
     return (

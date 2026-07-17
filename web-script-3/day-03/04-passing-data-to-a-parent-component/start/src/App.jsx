@@ -8,8 +8,8 @@ import './App.css'
 function App() {
     const [appName, setAppName] = useState('My App');
 
-    function handleRename(newName) {
-        setAppName(newName)
+    function rename(newName) {
+        setAppName(newName);
         document.title = newName;
     }
 
@@ -18,7 +18,7 @@ function App() {
             <Header title={appName} />
             <main>
                 <Section title="Rename Your App" className="section-rename-your-app">
-                    <button onClick={() => handleRename('My Awesome App')}>Rename App</button>
+                    <Rename handleRename={rename}/>
                 </Section>
             </main>
             <Footer />

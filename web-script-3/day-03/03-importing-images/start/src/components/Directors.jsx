@@ -1,3 +1,19 @@
+const images = import.meta.glob("/src/images/*.{png,jpg,jpeg}",{
+    eager:true,
+    import:"default",
+});
+//Creates an array of all image URLs of everytrhing inside src/images folder
+// const imgArr = Object.values(images);
+
+const getImageUrl = (filename)=>{
+    const path = `/src/images/${filename}`;
+    const url = images[path];
+    if(!url){
+        return "https://placeholder.co/600x600";
+    }
+    return url;
+};
+
 function Directors() {
     return (
         <div className="kittens-board-of-directors">
@@ -6,7 +22,7 @@ function Directors() {
                 <li>
                     <div className="board-member">
                         <div className="profile-picture">
-                            
+                            <img src={getImageUrl("cat-profile-pic-chairman.jpg")} alt="Missy" />
                         </div>
                         <div className="title-and-name">
                             <p><b>Name: </b>Missy</p>
@@ -17,7 +33,7 @@ function Directors() {
                 <li>
                     <div className="board-member">
                         <div className="profile-picture">
-                            
+                            <img src={getImageUrl("cat-profile-pic-ceo.jpg")} alt="Smokey" />
                         </div>
                         <div className="title-and-name">
                             <p><b>Name: </b>Smokey</p>
