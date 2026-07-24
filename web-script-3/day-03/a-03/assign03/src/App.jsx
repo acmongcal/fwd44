@@ -24,7 +24,7 @@ function App() {
         }
       }
     });
-    expression = expression.replaceAll("--","+");
+    expression = expression.replaceAll("--", "+");
     return new Function("return " + expression)();
   }
 
@@ -265,34 +265,32 @@ function App() {
   return (
     <div className="wrapper">
       <h1>Calculator App</h1>
-      <h2>Pending calculation:</h2>
-      {arrayCalc.length > 0 && (
-        <ul>
-          {arrayCalc.map((calc, i) => (
-            <li key={i}>{displayExp(calc)}</li>
+      <section className="calculator">
+        <div className="calc-display">
+          {arrayCalc.length > 0 && (
+            <ul className="calculations">
+              {arrayCalc.map((calc, i) => (
+                <li key={i}>{displayExp(calc)}</li>
+              ))}
+            </ul>
+          )}
+          <h2>
+            {arrayCalc.length != 0 && arrayCalc[arrayCalc.length - 1].value}
+          </h2>
+        </div>
+        <div className="calc-buttons">
+          {calculatorButtons.map((button, i) => (
+            <button
+              className={button.className}
+              onClick={() => validateOperations(button)}
+              key={i}
+              value={button.value}
+            >
+              {button.text}
+            </button>
           ))}
-        </ul>
-      )}
-      <p>
-        Output: [{" "}
-        {arrayCalc.length != 0 && arrayCalc[arrayCalc.length - 1].value} ]
-      </p>
-      <section>
-        {calculatorButtons.map((button, i) => (
-          <button
-            className={button.className}
-            onClick={() => validateOperations(button)}
-            key={i}
-            value={button.value}
-          >
-            {button.text}
-          </button>
-        ))}
+        </div>
       </section>
-      <p>
-        Memory:[
-        {memory.length != 0 && <b>{memory[0].sign + memory[0].value}</b>}]
-      </p>
     </div>
   );
 }
