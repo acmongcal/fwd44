@@ -1,0 +1,29 @@
+.update-account {
+    margin-bottom: em(20);
+}
+
+.form-update-username {
+    
+    label {
+        display: block;
+    }
+
+    label {
+        margin-bottom: em(4);
+    }
+
+    input[type="text"] {
+        padding: 4px 6px;
+    }
+
+    .error {
+        margin-left: 10px;
+        color: red;
+        font-style: italic;
+    }
+
+    .input-group {
+        margin-bottom: em(20);
+    }
+
+}

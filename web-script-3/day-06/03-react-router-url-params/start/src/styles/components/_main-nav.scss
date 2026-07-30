@@ -1,0 +1,40 @@
+// Main Nav
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+@use '../utilities/mixins' as *;
+
+.main-nav {
+
+    width: 100%;
+    background-color: $dark;
+
+    ul {
+        @include flatten($is-list: true);
+        display: flex;
+    }
+
+    li {
+        flex: 1;
+    }
+
+    a {
+        color: $light;
+        text-decoration: none;
+        display: block;
+        line-height: 50px;
+        font-size: 1.3em;
+        font-weight: bold;
+        padding: 0;
+        text-align: center;
+        @at-root .main-nav li:not(:first-child) a {
+            border-left: 3px solid $grey;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgba(white, 0.2);
+        }
+    }
+
+}

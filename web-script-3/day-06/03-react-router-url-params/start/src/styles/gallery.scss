@@ -1,0 +1,47 @@
+// Gallery
+
+@use './utilities/functions' as *;
+@use './utilities/mixins' as *;
+@use './base/settings' as *;
+
+.gallery {
+    padding: em(10);
+    border: 3px solid $dark;
+    border-radius: 6px;
+    display: grid;
+    gap: em(10);
+    grid-template-columns: 1fr 1fr;
+    .gallery-item {
+        border: 3px solid #128c43;
+        display: block;
+    }
+
+    img {
+        display: block;
+    }
+    @media (min-width: em(600)){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.gallery-single-item {
+    max-width: 460px;
+    margin-bottom: em(20);
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.portfolio-item-section {
+    display: block;
+    h2 {
+        margin-bottom: em(6);
+    }
+}
+
+.link-back-to-portfolio {
+    display: block;
+    margin-bottom: em(16);
+}

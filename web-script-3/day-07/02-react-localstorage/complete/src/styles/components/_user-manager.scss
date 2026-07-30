@@ -1,0 +1,29 @@
+.update-or-create-user {
+    margin-bottom: em(20);
+}
+
+.form-update-or-create-username {
+    
+    label {
+        display: block;
+    }
+
+    label {
+        margin-bottom: em(4);
+    }
+
+    input[type="text"] {
+        padding: em(4) em(6);
+    }
+
+    .error {
+        margin-left: em(10);
+        color: red;
+        font-style: italic;
+    }
+
+    .input-group {
+        margin-bottom: em(20);
+    }
+
+}

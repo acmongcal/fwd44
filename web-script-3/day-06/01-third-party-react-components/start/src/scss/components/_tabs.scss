@@ -1,0 +1,97 @@
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+
+
+// Insert 3rd Party React Tab Component Styles
+
+
+// Custom React Tabs Styles
+.react-tabs {
+    border: 1px solid black;
+    padding: em(6);
+} 
+
+// Custom React Tab Panel Styles
+.react-tabs__tab-panel {
+
+    padding: em(20);
+   
+    .tab-panel-content-overview {
+        display: flex;
+        align-items: flex-start;
+        figure {
+            margin: 0;
+            flex: 0 0 170px;
+        }
+        p {
+            margin-left: em(16);
+        }
+    }
+
+    .tab-panel-content-specs {
+        table, th, td, tr {
+           border: 1px solid black; 
+        }
+
+        th, td {
+            padding: em(8);
+        }
+
+        thead {
+            background-color: #8ade90;
+        }
+
+        tfoot {
+            background-color: #ddecff;
+        }
+
+        tbody tr:nth-child(even){
+            background-color: #e7e7e7;
+        }
+
+    }
+
+    .tab-panel-content-reviews {
+        
+        .review {
+            border-top: 1px dotted $dark;
+            border-bottom: 1px dotted $dark;
+            padding: em(16) 0;
+        }
+
+        .review:not(:last-child){
+            margin-bottom: em(20);
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: em(8);
+            .rating-heading {
+                margin: 0;
+            }
+            .rating-value {
+                margin-left: em(4);
+                position: relative;
+                top: em(2)
+            }
+        }
+
+        h3 {
+           margin-bottom: em(10, 18.72); 
+        }
+
+        .author {
+            margin-bottom: em(8);
+            .by {
+                font-weight: bold;
+            }
+        }
+
+        .review-text {
+            margin-bottom: 0;
+        }
+
+    }
+    
+}

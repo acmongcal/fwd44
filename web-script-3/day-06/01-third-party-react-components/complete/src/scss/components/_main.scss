@@ -1,0 +1,22 @@
+// Main
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+@use 'sass:color';
+
+
+main {
+    
+    padding: $section-padding;
+
+    .product-info {
+        border: 1px dotted color.adjust($grey, $lightness: -30%);
+        padding: em(16);
+        margin-bottom: em(50); 
+    }
+
+    .credit-info {
+        font-size: 0.7em;
+    }
+
+}

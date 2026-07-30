@@ -1,0 +1,20 @@
+// Add Item
+.add-item-container {
+    margin-bottom: em(20);
+
+    .error-box {
+        background-color: lighten($red, 32);
+        border: 2px solid $red;
+        color: darken($red, 35);
+        display: inline-block;
+        padding: em(12);
+        margin-bottom: em(16);
+        p {
+            @include flatten;
+        }
+    }
+
+    input {
+        margin-right: em(16);
+    }
+}

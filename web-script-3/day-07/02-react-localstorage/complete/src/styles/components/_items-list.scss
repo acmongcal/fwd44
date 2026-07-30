@@ -1,0 +1,24 @@
+// Items List
+.items-list-container {
+    ol {
+        padding-left: 0;
+        list-style-position: inside;
+        max-width: 264px;
+    }
+    li {
+        padding: em(8);
+        &:nth-child(even){
+            background-color: $grey;
+        }
+    }
+    .item-container {
+        display: inline-flex;
+    }
+    .item-text {
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}

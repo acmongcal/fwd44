@@ -1,0 +1,19 @@
+// Header
+header {
+    background-color: $yellow;
+    padding: $section-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 84px;
+    h1 {
+        @include flatten;
+    }
+    .user {
+        text-align: right;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+}

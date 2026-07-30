@@ -1,0 +1,8 @@
+// Footer
+footer {
+    padding: $section-padding;
+    border-top: 1px dotted darken($grey, 20);
+    p {
+        @include flatten;
+    }
+}

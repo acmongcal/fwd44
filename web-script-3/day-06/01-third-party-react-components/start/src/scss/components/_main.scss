@@ -1,0 +1,20 @@
+// Main
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+
+main {
+    
+    padding: $section-padding;
+
+    .product-info {
+        border: 2px dotted darken($grey, 30);
+        padding: em(16);
+        margin-bottom: em(50); 
+    }
+
+    .credit-info {
+        font-size: 0.7em;
+    }
+
+}

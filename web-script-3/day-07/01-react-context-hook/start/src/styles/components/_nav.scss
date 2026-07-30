@@ -1,0 +1,27 @@
+nav {
+   background-color: black;
+   ul {
+       @include flatten(true, false);
+       display: flex;
+   }
+   li {
+       flex: 1;
+   }
+   a {
+       display: block;
+       line-height: em(45);
+       text-align: center;
+       color: white;
+       text-decoration: none;
+       border-right: 1px solid white;
+       @at-root nav li:last-child a {
+           border-right: none;
+       }
+       &:hover, &:focus, &:active {
+           background-color: rgba(white, 0.3);
+       }
+       &.active {
+           background-color: rgba(green, 0.8);
+       }
+   } 
+}

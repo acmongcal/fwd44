@@ -1,0 +1,43 @@
+// Header
+header {
+    background-color: $yellow;
+    padding: $section-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 84px;
+    h1 {
+        @include flatten;
+    }
+    .user-buttons {
+
+        $bg: black;
+        $color: white;
+        $padTopBottom: 8px;
+        $padLeftRight: 10px;
+        $cursor: pointer;
+
+        text-align: right;
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: $padTopBottom $padTopBottom;
+            background-color: $bg;
+            color: $color;
+            cursor: $cursor;
+        }
+        button {
+            border: none;
+            padding: $padTopBottom $padTopBottom;
+            background-color: $bg;
+            color: $color;
+            cursor: $cursor;
+            font-size: em(16);
+        }
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+}
